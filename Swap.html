@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAP operations</title>
+</head>
+<body>
+    <h1>To Perform swapping of two strings</h1>
+    <p id="t1">First string</p>
+    <p id="t2">Second string</p>
+    <br/>
+    <button type="button" onclick="xor(1)">Click Me To Swap</button>
+
+    <h2> Input & Swap</h2>
+    <input type="text" id="i1" name="text1"> <br><br>
+    <p id="t3">Input Text 1</p>
+    <br/>
+    <input type="text" id="i2" name="text2"> <br><br>
+    <p id="t4">Input Text 2</p>
+    <br/>
+    <button type="button" onclick="reg()">Input</button>
+    <br/>
+    <button type="button" onclick="xor(2)">Click Me To Swap The Input Texts</button>
+
+<script>
+    function reg(){
+        var d = document.getElementById("i1").value;
+        document.getElementById('t3').innerHTML = d;
+        var e = document.getElementById("i2").value;
+        document.getElementById('t4').innerHTML = e;
+    }
+
+    // Swap function that takes two element IDs and swaps their inner HTML content
+    function swap(id1, id2) {
+    let elem1 = document.getElementById(id1).innerHTML;
+    let elem2 = document.getElementById(id2).innerHTML;
+    console.log(elem1, elem2);
+    // Swap
+    let temp = elem1;
+    elem1 = elem2;
+    elem2 = temp;
+    document.getElementById(id1).innerHTML = elem1;
+    document.getElementById(id2).innerHTML = elem2;
+    }
+
+    // Modified xor function
+    function xor(y) {
+        if (y == 1) {
+            console.log("ok");
+            swap('t1', 't2');
+        } else {
+            console.log("k0");
+            swap('t3', 't4');
+        }
+    }
+
+
+    // function swap(m,n) {
+    //     console.log(m,n);
+    //     let c = m;
+    //     m = n;
+    //     n = c;
+    //     console.log(m,n);
+    //     return m;
+    // }
+
+    // function xor(y) {
+    //     if (y==1){
+    //     console.log("ok");
+    //     let a = document.getElementById('t1').innerHTML;
+    //     let b = document.getElementById('t2').innerHTML;
+    //     var k = swap (a,b);
+    //     console.log(k);
+    //     document.getElementById('t1').innerHTML = a;
+    //     document.getElementById('t2').innerHTML = b;
+    //     // console.log(a,b);
+    //     }
+
+    //     else {
+    //     console.log("k0");
+    //     let u = document.getElementById('t3').innerHTML;
+    //     let i = document.getElementById('t4').innerHTML;
+    //     console.log(u,i);
+    //     let f = u;
+    //     u = i;
+    //     i = f;
+    //     document.getElementById('t3').innerHTML = u;
+    //     document.getElementById('t4').innerHTML = i;
+    //     console.log(u,i);
+    //     }
+    // }
+</script>
+</body>
+</html>

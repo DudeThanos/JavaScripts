@@ -1,0 +1,28 @@
+function xor(y) {
+        if (y==1){
+        console.log("ok");
+        let a = document.getElementById('t1').innerHTML;
+        let b = document.getElementById('t2').innerHTML;
+        console.log(a,b);
+        // Swap
+        let c = a;
+        a = b;
+        b = c;
+        document.getElementById('t1').innerHTML = a;
+        document.getElementById('t2').innerHTML = b;
+        }
+
+        else {
+        console.log("k0");
+        let u = document.getElementById('t3').innerHTML;
+        let i = document.getElementById('t4').innerHTML;
+        console.log(u,i);
+        // Swap
+        let f = u;
+        u = i;
+        i = f;
+        document.getElementById('t3').innerHTML = u;
+        document.getElementById('t4').innerHTML = i;
+        console.log(u,i);
+        }
+    }
